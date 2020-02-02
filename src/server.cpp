@@ -87,6 +87,7 @@ Server::Server(PCONFIGURATION config)
         &worker_thread_,
         [](void *context) { static_cast<Server *>(context)->thread_(); },
         this,
+        nullptr,
         0x10000,
         0x2C,
         -2
